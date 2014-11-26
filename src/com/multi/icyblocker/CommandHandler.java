@@ -106,6 +106,9 @@ public class CommandHandler implements CommandExecutor {
         if (is == null) {
             sender.sendMessage(ChatColor.DARK_RED + "Нужно держать предмет в руке.");
             return true;
+        }else if (is.getType() == Material.AIR) {
+            sender.sendMessage(ChatColor.DARK_RED + "Нужно держать предмет в руке.");
+            return true;
         }
         return false;
     }
